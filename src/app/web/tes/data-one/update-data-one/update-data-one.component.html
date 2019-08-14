@@ -1,0 +1,30 @@
+<app-header></app-header>
+<p class="sheer-up mx-3">
+  Admin Account Data Editing
+</p>
+<form [formGroup]="editData1Form" (ngSubmit)="onSubmit()">
+  <div class="form-row">
+    <div class="form-group mx-3">
+      <label for="inputUsername">Username</label>
+      <input type="username" class="form-control" id="inputUsername" placeholder="Username" formControlName="username" value="{{username}}">
+      <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+        <div *ngIf="f.username.errors.required">Username is required</div>
+      </div>
+    </div>
+  </div>
+  <div class="form-group mx-3">
+    <label for="inputRole">Role</label>
+    <input type="text" class="form-control" id="inputRole" placeholder="Role" formControlName="role" value="{{role}}">
+    <div *ngIf="submitted && f.role.errors" class="invalid-feedback">
+      <div *ngIf="f.role.errors.required">Role is required</div>
+    </div>
+  </div>
+  <div class="form-group mx-3">
+    <label for="inputEmail">Email</label>
+    <input type="text" class="form-control" id="inputEmail" placeholder="tegar@gmil.com" formControlName="email" value="{{email}}">
+    <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+      <div *ngIf="f.email.errors.required">Email is required</div>
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary mx-3">Submit</button>
+</form>

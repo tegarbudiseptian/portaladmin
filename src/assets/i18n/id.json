@@ -1,0 +1,8 @@
+{
+    "login.title": "Masukan username dan password",
+    "success": {
+        "login": "Anda berhasil masuk! Selamat datang di website admin Agent Branchless Banking!"
+    },
+    "login": "Masuk",
+    "logout": "Keluar"
+}
